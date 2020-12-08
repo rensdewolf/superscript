@@ -7,7 +7,7 @@
     "build": "babel src --out-dir lib --copy-files",
     "lint": "eslint --env node src *.js",
     "test": "mocha --compilers js:babel-register test -R spec -s 1700 -t 300000 --recursive",
-    "prepublish": "npm run build",
+    "prepare": "npm run build",
     "profile": "mocha --compilers js:babel-register test -R spec -s 1700 -t 300000 --prof --log-timer-events --recursive",
     "dtest": "DEBUG=*,-mquery,-mocha*, mocha --compilers js:babel-register test -R spec -s 1700 -t 300000 --recursive",
     "itest": "DEBUG=SS* DEBUG_LEVEL=info mocha --compilers js:babel-register test -R spec -s 1700 -t 300000 --recursive",
